@@ -1,0 +1,18 @@
+{
+  "name": "wit_nlp",
+  "version": "1.0.0",
+  "description": "using wit.ai to make dialogue system for clothings recommender",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "MGPark",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "node-wit": "^4.2.0",
+    "request": "^2.81.0",
+    "socket.io": "^2.0.3"
+  }
+}

@@ -1,2 +1,5 @@
-# fashion_chat_bot
-wit.ai assignment
+# wit.ai chat bot
+
+wit.ai assignment see Demo
+
+
