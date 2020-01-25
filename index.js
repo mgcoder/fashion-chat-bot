@@ -116,10 +116,11 @@ class RecommendDialogue{
 					var $ = cheerio.load(html);
 					var extra = {};
 					if (mode === "look_matching"){
-						var looks = $('.compact-look')
+						var looks = $('.look')
 						var a = looks.eq(Math.floor(Math.random()*looks.length)).find('figure').find('a').eq(0);
 						extra.link = a.attr('href')
-						extra.img = a.children().first().attr('src');
+						extra.img = a.children().first().find('img').attr('src');
+            
 						resolve(extra);
 					}
 					if (mode === "list_matching"){
@@ -248,7 +249,7 @@ class DialogueManager{
 
 
 //Wit.ai
-const wit_client = new Wit({accessToken: ""});
+const wit_client = new Wit({accessToken: process.env.SECRET});
 
 var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/src'));
